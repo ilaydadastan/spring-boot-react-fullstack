@@ -18,6 +18,9 @@
 		<frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
 		<node.version>v10.13.0</node.version>
 		<yarn.version>v1.12.1</yarn.version>
+		<spring.profiles.active>
+			demo
+		</spring.profiles.active>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -136,6 +139,11 @@
 							</execution>
 						</executions>
 					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jar-plugin</artifactId>
+						<version>3.3.0</version>
+					</plugin>
 				</plugins>
 			</build>
 		</profile>
@@ -150,5 +158,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

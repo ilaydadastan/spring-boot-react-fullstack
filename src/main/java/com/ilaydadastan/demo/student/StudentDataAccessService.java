@@ -37,7 +37,7 @@ public class StudentDataAccessService {
                 " last_name," +
                 " email," +
                 " gender)" +
-                "VALUES (?, ?, ?, ?, ?::gender)";
+                "VALUES (?, ?, ?, ?, ?)";
         jdbcTemplate.update(
                 sql,
                 studentId,
@@ -83,10 +83,10 @@ public class StudentDataAccessService {
                 " course.course_id, " +
                 " course.name, " +
                 " course.description, " +
-                " course.department " +
-                " course.teacher " +
-                " student_course.start_date " +
-                " student_course.end_date " +
+                " course.department, " +
+                " course.teacher, " +
+                " student_course.start_date, " +
+                " student_course.end_date, " +
                 " student_course.grade " +
                 "FROM student " +
                 "JOIN student_course USING(student_id) " +
