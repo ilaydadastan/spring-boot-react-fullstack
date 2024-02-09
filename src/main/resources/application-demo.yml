@@ -1,18 +1,15 @@
 spring:
   datasource:
-    username: ilaydadastan
-    password: postgres
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 30
-    jdbc-url: jdbc:postgresql://fullstackspringbootdb.cb8s80cccpex.eu-central-1.rds.amazonaws.com:5432/ilaydadastandemo
+    jdbc-url: ${DB_URL}
   flyway:
-    url: jdbc:postgresql://localhost:5432/ilaydadastandemo
-    user: postgres
-    password: postgres
-  profiles:
-    active: @spring.profiles.active@
+    url: ${DB_URL}
+    user: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
 server:
   error:
     include-message: always
-  port: 5000

@@ -18,9 +18,6 @@
 		<frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
 		<node.version>v10.13.0</node.version>
 		<yarn.version>v1.12.1</yarn.version>
-		<spring.profiles.active>
-			demo
-		</spring.profiles.active>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -146,6 +143,11 @@
 					</plugin>
 				</plugins>
 			</build>
+			<properties>
+				<spring.profiles.active>
+					demo
+				</spring.profiles.active>
+			</properties>
 		</profile>
 	</profiles>
 
