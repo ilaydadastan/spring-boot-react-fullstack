@@ -11,7 +11,7 @@ spring:
     user: postgres
     password: postgres
   profiles:
-    active: @spring.profiles.active@
+    active: demo
 server:
   error:
     include-message: always
