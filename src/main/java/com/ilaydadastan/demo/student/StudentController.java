@@ -1,6 +1,5 @@
 package com.ilaydadastan.demo.student;
 
-import com.ilaydadastan.demo.exception.ApiRequestException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +20,6 @@ public class StudentController {
 
     @GetMapping
     public List<Student> getAllStudents() {
-       // throw new ApiRequestException("Oops cannot get all students");
         return studentService.getAllStudents();
     }
 
